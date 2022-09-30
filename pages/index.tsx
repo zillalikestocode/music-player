@@ -3,6 +3,7 @@ import { getSession } from "next-auth/react";
 import Head from "next/head";
 import Center from "../components/Center";
 import Sidebar from "../components/Sidebar";
+import Play from "../components/Play";
 
 const Home: NextPage = () => {
   return (
@@ -16,13 +17,16 @@ const Home: NextPage = () => {
         <Sidebar />
         <Center />
       </main>
+      <div className="sticky bottom-0 ">
+        <Play />
+      </div>
     </div>
   );
 };
 
 export default Home;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: any) {
   const session = await getSession(context);
 
   return {

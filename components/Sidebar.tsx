@@ -33,39 +33,12 @@ const Sidebar = () => {
   }, [session, spotifyApi]);
 
   return (
-    <div className="border-gray-900 sm:max-w-[12rem] hidden md:inline-flex lg:max-w-[15rem] text-xs lg:text-sm h-screen overflow-y-scroll scrollbar-hide p-5 text-gray-500">
+    <div className="border-gray-900 border-r mb-24 sm:max-w-[12rem] hidden md:inline-flex lg:max-w-[15rem] text-xs lg:text-sm h-screen overflow-y-scroll scrollbar-hide p-5 text-gray-500">
       <div className="space-y-3">
-        <button
-          onClick={() => signOut()}
-          className="flex items-center gap-3 hover:text-white"
-        >
-          <p>Logout</p>
-        </button>
-        <button className="flex items-center gap-3 hover:text-white">
-          <HomeIcon className="w-5 h-5" />
-          <p>Home</p>
-        </button>
-        <button className="flex items-center gap-3 hover:text-white">
-          <SearchIcon className="w-5 h-5" />
-          <p>Search</p>
-        </button>
-        <button className="flex items-center gap-3 hover:text-white">
+        <p className="flex itemx-center gap-2">
           <LibraryIcon className="w-5 h-5" />
-          <p>Libraries</p>
-        </button>
-        <hr className="border-t-[0.1px] border-gray-900" />
-        <button className="flex items-center gap-3 hover:text-white">
-          <PlusCircleIcon className="w-5 h-5" />
-          <p>Create Playlist</p>
-        </button>
-        <button className="flex items-center gap-3 hover:text-white">
-          <HeartIcon className="w-5 h-5" />
-          <p>Liked Songs</p>
-        </button>
-        <button className="flex items-center gap-3 hover:text-white">
-          <RssIcon className="w-5 h-5" />
-          <p>Your Episodes</p>
-        </button>
+          Playlists
+        </p>
         <hr className="border-t-[0.1px] border-gray-900" />
         {playlist?.map((playlist: any) => {
           return (
