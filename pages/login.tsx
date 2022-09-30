@@ -29,6 +29,13 @@ const Login = ({ providers }: any) => {
           </button>
         );
       })}
+      <p className="mt-5 text-sm text-gray-500 w-96 text-center">
+        A remote music Player that connects to your spotify account and plays
+        songs from your playlist on your Spotify devices
+      </p>
+      <p className="absolute bottom-5 left-0 right-0 text-center">
+        Made with Love by Emmanuel Ngoka
+      </p>
     </div>
   );
 };
