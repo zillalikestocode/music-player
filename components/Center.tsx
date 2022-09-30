@@ -12,7 +12,9 @@ const Center = () => {
   const playlistId = useAppSelector(
     (store: RootState) => store.playlistId.value
   );
-  const playlist = useAppSelector((store: RootState) => store.playlist.value);
+  const playlist: any = useAppSelector(
+    (store: RootState) => store.playlist.value
+  );
   const spotifyApi = useSpotify();
   const dispatch = useAppDispatch();
 
